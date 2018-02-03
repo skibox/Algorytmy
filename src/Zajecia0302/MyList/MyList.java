@@ -18,23 +18,24 @@ public class MyList {
 	public Element findForward(int value) {
 		Element currentElement = head;
 		
-		do{
+		while(currentElement != null) {
 			if(currentElement.getData() == value)
 				return currentElement;
 			currentElement = currentElement.getNext();
-		} while(currentElement.getNext() != null);
+		}
 		
-		return null;	
+		return null;
+		
 	}
 	
-	public Element findFBackward(int value) {
-		Element currentElement = tail;
+	public Element findBackward(int value) {
+		Element currentElement = head;
 		
-		do{
+		while(currentElement != null) {
 			if(currentElement.getData() == value)
 				return currentElement;
 			currentElement = currentElement.getPrev();
-		} while(currentElement.getPrev() != null);
+		}
 		
 		return null;	
 	}
@@ -80,5 +81,85 @@ public class MyList {
 		else 
 			setFirstElement(newElement);
 	}
+	
+	public void addElementAfter(int value, int afterWhat) throws Exception{
+		Element elementAfter = findForward(afterWhat);
+		Element newElement = new Element();
+		newElement.setData(value);
+		
+		if (elementAfter == null) {
+			throw new Exception("Nie ma takiej wartości.");
+		}
+		else if(elementAfter == tail) {
+			addElementAtEnd(value);
+		}
+		else {
+			newElement.setNext(elementAfter.getNext());
+			newElement.setPrev(elementAfter);
+			
+			elementAfter.setNext(newElement);
+			newElement.getNext().setPrev(newElement);
+			counter++;
+		}
+		
+	}
+	
+	public void addElementBefore(int value, int beforeWhat) throws Exception{
+		Element elementBefore = findForward(beforeWhat);
+		Element newElement = new Element();
+		newElement.setData(value);
+		
+		if (elementBefore == null) {
+			throw new Exception("Nie ma takiej wartości.");
+		}
+		else if(elementBefore == head) {
+			addElementAtBeginning(value);
+		}
+		else {
+			newElement.setNext(elementBefore);
+			newElement.setPrev(elementBefore.getPrev());
+			
+			elementBefore.setPrev(newElement);
+			newElement.getPrev().setNext(newElement);
+			counter++;
+		}
+	}
+	
+	public void deleteElement(int value) {
+		Element elementToDelete = findForward(value);
+		
+		if(elementToDelete == head) {
+			head = head.getNext();
+			head.setPrev(null);
+		}
+		else if(elementToDelete == tail) {
+			tail = tail.getPrev();
+			tail.setNext(null);
+		}
+		else{
+			elementToDelete.getNext().setPrev(elementToDelete.getPrev());
+			elementToDelete.getPrev().setNext(elementToDelete.getNext());
+		}
+		counter--;
+		
+	}
+	
+	@Override
+	public String toString() {
+		StringBuilder sBuilder = new StringBuilder();
+		
+		Element currentElement = head;
+		
+		while(true) {
+			
+			sBuilder.append(currentElement.getData() + " ");
+			if(currentElement.getNext() == null) break;
+			currentElement = currentElement.getNext();
+			
+		} 
+		
+		return sBuilder.toString();	
+	}
+	
 	
 }
