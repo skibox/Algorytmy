@@ -1,41 +1,65 @@
 package Lista.zadanieDomowe2;
 
+import java.util.Arrays;
 import java.util.Scanner;
+import java.util.Vector;
+
+import org.w3c.dom.css.Counter;
 
 public class Flamaster {
-	public static String replaceText(String input) {
-		StringBuilder output = new StringBuilder();
-		char[] inputChars = input.toCharArray();
-		
-		for (int i = 0; i < inputChars.length; i++) {
-			
+	public static String replaceText(String input) throws ArrayIndexOutOfBoundsException {
+		StringBuilder charsAndCounters = new StringBuilder();
+		Vector<Character> inputCharArray = new Vector<Character>();
+		Vector<Integer> charCounters = new Vector<Integer>();
+		Vector<Character> charTypes = new Vector<Character>();
+		int counter;
+
+		for (int i = 0; i < input.length(); i++) {
+			inputCharArray.add(input.charAt(i));
 		}
-		
-		
-		return output.toString();
+
+		while (!inputCharArray.isEmpty()) {
+			counter = 1;
+			charTypes.add(inputCharArray.get(0));
+			if (inputCharArray.size() > 1) {
+				while (inputCharArray.get(0) == inputCharArray.get(1)) {
+					counter++;
+					inputCharArray.remove(0);
+
+					inputCharArray.remove(0);
+					charCounters.add(counter);
+				}
+			}
+			else {
+				counter++;
+				inputCharArray.remove(0);
+			}
+			while (!charTypes.isEmpty()) {
+				charsAndCounters.append(charTypes.get(0)).append(charCounters.get(0));
+				charTypes.remove(0);
+				charCounters.remove(0);
+			}
+		}
+
+		return charsAndCounters.toString();
 	}
-	
-//	public static int countChars(char inputCharacter, char[] inputCharArray) {
-//		int counter = 0;
-//		for (int i = 0; i < inputCharArray.length; i++) {
-//			
-//		}
-//	}
-	
+
 	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
-		
-		System.out.println("Podaj liczbe zestawow: ");
-		int probeCount = scan.nextInt();
-		scan.nextLine();
-		
-		String[] inputTexts = new String[probeCount];
-		
-		for (int i = 0; i < inputTexts.length; i++) {
-			System.out.println("Podaj " + i+1 + " zestaw: ");
-			inputTexts[i] = scan.nextLine();
-		}
-		
-		scan.close();
+		// Scanner scan = new Scanner(System.in);
+		//
+		// System.out.println("Podaj liczbe zestawow: ");
+		// int probeCount = scan.nextInt();
+		// scan.nextLine();
+		//
+		// String[] inputTexts = new String[probeCount];
+		//
+		// for (int i = 0; i < inputTexts.length; i++) {
+		// System.out.println("Podaj " + i + 1 + " zestaw: ");
+		// inputTexts[i] = scan.nextLine();
+		// }
+		//
+		// scan.close();
+
+		System.out.println(replaceText("AAB"));
 	}
 }
