@@ -1,10 +1,6 @@
 package Lista.zadanieDomowe2;
 
-import java.util.Arrays;
-import java.util.Scanner;
 import java.util.Vector;
-
-import org.w3c.dom.css.Counter;
 
 public class Flamaster {
 	public static String replaceText(String input) throws ArrayIndexOutOfBoundsException {
