@@ -14,7 +14,7 @@ public class Test {
 		int userPoints = 0;
 		int cpuPoints = 0;
 		
-		System.out.println("Game start");
+		System.out.printf("%19s\n","Game   start");
 		System.out.println("====YOU==== | ====CPU====");
 		System.out.println("----------- | -----------");
 		
@@ -40,7 +40,7 @@ public class Test {
 			
 		}
 		System.out.println();
-		System.out.println("Game end");
+		System.out.printf("%17s\n","Game   end");
 		System.out.println("----------- | -----------");
 		System.out.printf("%11s | %11s", String.valueOf(userPoints), String.valueOf(cpuPoints));
 	}

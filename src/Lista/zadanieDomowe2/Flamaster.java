@@ -1,5 +1,6 @@
 package Lista.zadanieDomowe2;
 
+import java.util.Scanner;
 import java.util.Vector;
 
 public class Flamaster {
@@ -13,8 +14,9 @@ public class Flamaster {
 		for (int i = 0; i < input.length(); i++) {
 			inputCharArray.add(input.charAt(i));
 		}
-
-		while (!inputCharArray.isEmpty()) {
+		// Tu gdzieś się zamotałem, zlicza dobrze ale wywala ex przy ostatnim znaku w Stringu
+		// dobra, zlapalem juz blad, jak bede mial chwile to go ogarne
+		while (inputCharArray.size() != 1) {
 			counter = 1;
 			charTypes.add(inputCharArray.get(0));
 			if (inputCharArray.size() > 1) {
@@ -22,9 +24,10 @@ public class Flamaster {
 					counter++;
 					inputCharArray.remove(0);
 
-					inputCharArray.remove(0);
-					charCounters.add(counter);
+		//			inputCharArray.remove(0);
+					
 				}
+				charCounters.add(counter);
 			}
 			else {
 				counter++;
@@ -36,25 +39,25 @@ public class Flamaster {
 				charCounters.remove(0);
 			}
 		}
-
+		
 		return charsAndCounters.toString();
 	}
 
 	public static void main(String[] args) {
-		// Scanner scan = new Scanner(System.in);
-		//
-		// System.out.println("Podaj liczbe zestawow: ");
-		// int probeCount = scan.nextInt();
-		// scan.nextLine();
-		//
-		// String[] inputTexts = new String[probeCount];
-		//
-		// for (int i = 0; i < inputTexts.length; i++) {
-		// System.out.println("Podaj " + i + 1 + " zestaw: ");
-		// inputTexts[i] = scan.nextLine();
-		// }
-		//
-		// scan.close();
+		 Scanner scan = new Scanner(System.in);
+		
+		 System.out.println("Podaj liczbe zestawow: ");
+		 int probeCount = scan.nextInt();
+		 scan.nextLine();
+		
+		 String[] inputTexts = new String[probeCount];
+		
+		 for (int i = 0; i < inputTexts.length; i++) {
+		 System.out.println("Podaj " + i + 1 + " zestaw: ");
+		 inputTexts[i] = scan.nextLine();
+		 }
+		
+		 scan.close();
 
 		System.out.println(replaceText("AAB"));
 	}

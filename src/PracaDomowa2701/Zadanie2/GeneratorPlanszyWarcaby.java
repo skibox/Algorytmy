@@ -12,10 +12,10 @@ public class GeneratorPlanszyWarcaby {
 		
 		for (int i = 0; i < plansza.length; i++) {
 			for (int j = 0; j < plansza[i].length; j++) {
-				if ((i + j)%2 != 0 && i < 3) {
+				if ((i + j)%2 != 0 && i < plansza[i].length / 2 - 1) {
 					plansza[i][j] = 'C';
 				}
-				else if ((i + j)%2 != 0 && i > plansza[i].length / 2 + 1) {
+				else if ((i + j)%2 != 0 && i > plansza[i].length / 2) {
 					plansza[i][j] = 'B';
 				}
 			}
