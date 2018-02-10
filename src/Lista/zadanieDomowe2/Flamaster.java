@@ -9,56 +9,64 @@ public class Flamaster {
 		Vector<Character> inputCharArray = new Vector<Character>();
 		Vector<Integer> charCounters = new Vector<Integer>();
 		Vector<Character> charTypes = new Vector<Character>();
-		int counter;
+		int counter = 0;
 
 		for (int i = 0; i < input.length(); i++) {
 			inputCharArray.add(input.charAt(i));
 		}
-		// Tu gdzieś się zamotałem, zlicza dobrze ale wywala ex przy ostatnim znaku w Stringu
-		// dobra, zlapalem juz blad, jak bede mial chwile to go ogarne
-		while (inputCharArray.size() != 1) {
-			counter = 1;
-			charTypes.add(inputCharArray.get(0));
-			if (inputCharArray.size() > 1) {
-				while (inputCharArray.get(0) == inputCharArray.get(1)) {
-					counter++;
-					inputCharArray.remove(0);
 
-		//			inputCharArray.remove(0);
-					
-				}
+		while (!inputCharArray.isEmpty()) {
+
+			counter = 0;
+			if (inputCharArray.size() > 1) {
+				charTypes.add(inputCharArray.get(0));
+
+				do
+					counter++;
+				while (inputCharArray.get(0) == inputCharArray.get(counter));
+
 				charCounters.add(counter);
-			}
-			else {
-				counter++;
+
+				for (int i = 0; i < counter; i++)
+					inputCharArray.remove(0);
+			} else {
+				charTypes.add(inputCharArray.get(0));
+				charCounters.add(1);
 				inputCharArray.remove(0);
+				counter++;
 			}
-			while (!charTypes.isEmpty()) {
+		}
+
+		while (!charCounters.isEmpty()) {
+			if (charCounters.get(0) != 1) {
 				charsAndCounters.append(charTypes.get(0)).append(charCounters.get(0));
+				charTypes.remove(0);
+				charCounters.remove(0);
+			} else {
+				charsAndCounters.append(charTypes.get(0));
 				charTypes.remove(0);
 				charCounters.remove(0);
 			}
 		}
-		
+
 		return charsAndCounters.toString();
 	}
 
 	public static void main(String[] args) {
-		 Scanner scan = new Scanner(System.in);
-		
-		 System.out.println("Podaj liczbe zestawow: ");
-		 int probeCount = scan.nextInt();
-		 scan.nextLine();
-		
-		 String[] inputTexts = new String[probeCount];
-		
-		 for (int i = 0; i < inputTexts.length; i++) {
-		 System.out.println("Podaj " + i + 1 + " zestaw: ");
-		 inputTexts[i] = scan.nextLine();
-		 }
-		
-		 scan.close();
+		Scanner scan = new Scanner(System.in);
 
-		System.out.println(replaceText("AAB"));
+		System.out.println("Podaj liczbe zestawow: ");
+		int probeCount = scan.nextInt();
+		scan.nextLine();
+
+		String[] inputTexts = new String[probeCount];
+
+		for (int i = 0; i < inputTexts.length; i++) {
+			System.out.println("Podaj " + (i + 1) + " zestaw: ");
+			inputTexts[i] = scan.nextLine();
+			System.out.println("Wynik: " + replaceText(inputTexts[i]));
+		}
+
+		scan.close();
 	}
 }
