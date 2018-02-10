@@ -25,7 +25,7 @@ public class Flamaster {
 						counter++;
 					while (inputCharArray.get(0) == inputCharArray.get(counter));
 				} catch (IndexOutOfBoundsException e) {
-					counter = inputCharArray.size(); 
+					counter = inputCharArray.size();
 				}
 
 				charCounters.add(counter);

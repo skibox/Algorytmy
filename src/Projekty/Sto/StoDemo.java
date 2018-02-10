@@ -9,7 +9,6 @@ public class StoDemo {
 		Scanner scan = new Scanner(System.in);
 		int x = scan.nextInt();
 		scan.nextLine();
-		
 		return x;
 	}
 	
@@ -19,17 +18,17 @@ public class StoDemo {
 		return x;
 	}
 	
+	//do skonczenia
+	
 	public static int cpuAlwaysWinningMove(int currentSum) {
 		int[] possibleMoves = {1,2,3,4,5,6,7,8,9,10};
 		int move = 0;
-		if ((currentSum - 10) > 13) {
-			int i = 0;
-			while(currentSum - possibleMoves[i] != 12) {
-				move = possibleMoves[i];
-				i++;
-			}  
-			
-			return move;
+		if (currentSum < 23 && currentSum > 11) {
+			return currentSum - 12;
+		}
+		
+		else if(currentSum < 12) {
+			return currentSum;
 		}
 		
 		else {
@@ -43,7 +42,8 @@ public class StoDemo {
 		int sum = 100;
 		int cpu = 0;
 		
-		while (true) {
+		
+		while (sum != 0 || sum != 1) {
 			System.out.println("Sum: " + sum);
 			sum -= humanMove();
 			if(sum < 2) {
@@ -52,9 +52,15 @@ public class StoDemo {
 			}
 			cpu = cpuAlwaysWinningMove(sum);
 			sum -= cpu;
+
 			System.out.println("cpumove: " + cpu);
 			System.out.println("Sum: " + sum);
 			System.out.println("===============");
+			
+			if(sum < 2) {
+				System.out.println("cpu wins!");
+				break;
+			}
 		}
 	}
 }
