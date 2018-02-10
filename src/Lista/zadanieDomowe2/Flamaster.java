@@ -20,10 +20,13 @@ public class Flamaster {
 			counter = 0;
 			if (inputCharArray.size() > 1) {
 				charTypes.add(inputCharArray.get(0));
-
-				do
-					counter++;
-				while (inputCharArray.get(0) == inputCharArray.get(counter));
+				try {
+					do
+						counter++;
+					while (inputCharArray.get(0) == inputCharArray.get(counter));
+				} catch (IndexOutOfBoundsException e) {
+					counter = inputCharArray.size(); 
+				}
 
 				charCounters.add(counter);
 
