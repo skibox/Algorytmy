@@ -22,7 +22,7 @@ public class Calculator {
 	}
 	
 	public boolean isEven(double a) {
-		return (a%2 == 0);
+		return (a % 2 == 0);
 	}
 	
 	public int nFibonacci(int n) {
