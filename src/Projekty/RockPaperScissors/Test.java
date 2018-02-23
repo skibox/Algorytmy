@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class Test {
 
 	public static void main(String[] args) {
-		Random rand = new Random();
 		Scanner scan = new Scanner(System.in);
 		char userMove;
 		boolean end = false;
@@ -43,6 +42,7 @@ public class Test {
 		System.out.printf("%17s\n","Game   end");
 		System.out.println("----------- | -----------");
 		System.out.printf("%11s | %11s", String.valueOf(userPoints), String.valueOf(cpuPoints));
+		scan.close();
 	}
 	
 	

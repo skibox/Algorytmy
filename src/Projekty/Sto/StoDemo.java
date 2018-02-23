@@ -9,6 +9,7 @@ public class StoDemo {
 		Scanner scan = new Scanner(System.in);
 		int x = scan.nextInt();
 		scan.nextLine();
+		scan.close();
 		return x;
 	}
 	
