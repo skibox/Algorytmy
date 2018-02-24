@@ -27,5 +27,6 @@ public class Control {
 		
 		employee.raiseSalary(50);
 		System.out.println(employee.toString());
+		scan.close();
 	}
 }

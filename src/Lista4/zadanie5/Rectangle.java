@@ -75,6 +75,7 @@ public class Rectangle {
 			}
 			else end = true;
 		}
+		scan.close();
 		return output;
 	}
 	

@@ -69,6 +69,7 @@ public class Date {
 			} else
 				end = true;
 		}
+		scan.close();
 		return newDay;
 	}
 
@@ -92,6 +93,7 @@ public class Date {
 			} else
 				end = true;
 		}
+		scan.close();
 		return newMonth;
 	}
 
@@ -115,6 +117,7 @@ public class Date {
 			} else
 				end = true;
 		}
+		scan.close();
 		return newYear;
 	}
 

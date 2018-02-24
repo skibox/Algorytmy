@@ -14,5 +14,6 @@ public class Control {
 		Rectangle rectangle1 = new Rectangle(sideA, sideB);
 		
 		System.out.println(rectangle1.toString());
+		scan.close();
 	}
 }

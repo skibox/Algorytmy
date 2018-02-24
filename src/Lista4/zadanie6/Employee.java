@@ -88,6 +88,7 @@ public class Employee {
 			} else
 				end = true;
 		}
+		scan.close();
 		return newID;
 	}
 
@@ -111,6 +112,7 @@ public class Employee {
 			} else
 				end = true;
 		}
+		scan.close();
 		return newFirstName;
 	}
 
@@ -134,6 +136,7 @@ public class Employee {
 			} else
 				end = true;
 		}
+		scan.close();
 		return newLastName;
 	}
 
@@ -157,6 +160,7 @@ public class Employee {
 			} else
 				end = true;
 		}
+		scan.close();
 		return newSalary;
 	}
 

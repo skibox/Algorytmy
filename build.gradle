@@ -1,0 +1,17 @@
+group 'Algorytmy'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.jongo:jongo:1.1'
+    compile 'org.mongodb:mongo-java-driver:2.+'
+    testCompile 'junit:junit:4.11'
+    testCompile 'org.mockito:mockito-all:1.+'
+}

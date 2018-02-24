@@ -23,6 +23,7 @@ public class Control {
 			String temp = scan.nextLine();
 			if (temp == "Y") break;
 			else System.out.println("Lecisz");
+			scan.close();
 		}
 	}
 }
