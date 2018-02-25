@@ -4,12 +4,13 @@ import java.util.Scanner;
 import java.util.Stack;
 
 public class ONP {
+	
 	public static void main(String[] args) {
 		Stack<Integer> onp = new Stack<Integer>();
 		Stack<Integer> check = new Stack<Integer>();
 
 		Scanner scan = new Scanner(System.in);
-		char input = 'a';
+		char input;
 
 		System.out.println("Dodawaj na stos: (= - koniec)");
 		while (true) {
@@ -20,33 +21,17 @@ public class ONP {
 				check.add(Character.getNumericValue(input));
 				onp.add(Character.getNumericValue(input));
 			} else if (input == '+') {
-				int temp1 = onp.peek();
-				onp.pop();
-				int temp2 = onp.peek();
-				onp.pop();
-				onp.add(temp1 + temp2);
+				onp.add(onp.pop() + onp.pop());
 			} else if (input == '-') {
-				int temp1 = onp.peek();
-				onp.pop();
-				int temp2 = onp.peek();
-				onp.pop();
-				onp.add(temp1 + temp2);
+				onp.add(onp.pop() - onp.pop());
 			} else if (input == '*') {
-				int temp1 = onp.peek();
-				onp.pop();
-				int temp2 = onp.peek();
-				onp.pop();
-				onp.add(temp1 * temp2);
+				onp.add(onp.pop() * onp.pop());
 			} else if (input == '/') {
-				int temp1 = onp.peek();
-				onp.pop();
-				int temp2 = onp.peek();
-				onp.pop();
-				onp.add(temp1 / temp2);
+				onp.add(onp.pop() / onp.pop());
 			}
 		}
 		System.out.println("Wynik: ");
-		System.out.println(onp.peek());
+		System.out.println(onp.pop());
 		
 		scan.close();
 

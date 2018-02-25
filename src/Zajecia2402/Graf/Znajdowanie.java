@@ -8,6 +8,30 @@ import java.util.Stack;
 import java.util.Vector;
 
 public class Znajdowanie {
+	/*
+	public static boolean DFS(int currentVertex) {
+		visited[currentVertex] = true;
+		Stack.push(currentVertex);
+		
+		if(currentVertex == finalVertex) return true;
+		
+		ArrayList<Integer> sasiedzi = graf.get(currentVertex);
+		
+		for(int i = 0; i < sasiedzi.size(); i++){
+			if(visited[sasiedzi.get(i)]) continue;
+			if(DFS(sasiedzi.get(i))) return true;
+		}
+		
+		stack.pop();
+		return false;
+	}
+	*/
+	/*
+	parse()
+	if(DFS(vs)){
+		while
+	
+	*/
 	public static void main(String[] args) throws Exception {
 		File input = new File("./src/Zajecia2402/Graf/files/input.in");
 		Scanner scan = new Scanner(input);
