@@ -23,6 +23,8 @@ public class SortowanieDemo {
 		default:
 			break;
 		}
+		
+		scan.close();
 
 	}
 }
