@@ -2,14 +2,15 @@ package PracaDomowa1003.zadanieDomoweRPG.upgrades;
 
 import PracaDomowa1003.zadanieDomoweRPG.Character;
 
-public class RunaMiecz extends Dekorator{
-	
+public class RunaMiecz extends Dekorator {
+
 	Character character;
 	static final int ATT = 5;
+
 	public RunaMiecz(Character character) {
 		this.character = character;
 	}
-	
+
 	@Override
 	public int getAttack() {
 		return character.getAttack() + ATT;
@@ -27,7 +28,7 @@ public class RunaMiecz extends Dekorator{
 
 	@Override
 	public void setDefence(int defence) {
-		
+
 	}
 
 	@Override
@@ -37,7 +38,7 @@ public class RunaMiecz extends Dekorator{
 
 	@Override
 	public void setPackVolume(int packVolume) {
-		
+
 	}
 
 	@Override

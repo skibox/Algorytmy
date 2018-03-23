@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class FasadaDemo {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		Koko koko = new Koko(800);
+		Koko koko = new Koko(1600);
 		CukierPuder cukier = new CukierPuder(100);
 		Talk talk = new Talk(100);
 		
@@ -32,10 +32,20 @@ public class FasadaDemo {
 //		objects[1] = cukier;
 //		objects[2] = talk;
 		
-		FasadaLaboratorium laboratorium = new FasadaLaboratorium(koko, cukier, talk);
-		laboratorium.addSugar();
-		laboratorium.addKoko();
+		FasadaLaboratorium laboratorium = new FasadaLaboratorium(koko);
+		laboratorium.getKoko30();
 		laboratorium.showAmounts();
+		System.out.println(laboratorium.sugarAdded);
+		System.out.println(laboratorium.talkAdded);
+		System.out.println(laboratorium.kokoToAdulterants);
+		
+		Koko koko2 = new Koko(2000);
+		FasadaLaboratorium laboratorium1 = new FasadaLaboratorium(koko2);
+		laboratorium1.getKokoPremium60();
+		laboratorium1.showAmounts();
+		System.out.println(laboratorium1.sugarAdded);
+		System.out.println(laboratorium1.talkAdded);
+		System.out.println(laboratorium1.kokoToAdulterants);
 	
 	}
 }

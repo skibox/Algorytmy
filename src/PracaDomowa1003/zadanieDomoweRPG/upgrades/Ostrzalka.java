@@ -11,12 +11,12 @@ public class Ostrzalka extends Dekorator{
 	
 	@Override
 	public int getAttack() {
-		return character.getAttack() + 5;
+		return character.getAttack() + 10;
 	}
 
 	@Override
-	public void setAttack(int attack) {
-		
+	public void setAttack(int siema) {
+		this.character.setAttack(10);
 	}
 
 	@Override
@@ -41,6 +41,6 @@ public class Ostrzalka extends Dekorator{
 
 	@Override
 	public String getName() {
-		return "Naostrzony ";
+		return " naostrzony ";
 	}
 }

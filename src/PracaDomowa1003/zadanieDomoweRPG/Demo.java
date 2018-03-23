@@ -1,5 +1,12 @@
 package PracaDomowa1003.zadanieDomoweRPG;
 
-public class Demo {
+import PracaDomowa1003.zadanieDomoweRPG.items.Miecz;
+import PracaDomowa1003.zadanieDomoweRPG.items.Tarcza;
 
+public class Demo {
+	public static void main(String[] args) {
+		Character character;
+		
+//		character = new Miecz();
+	}
 }
