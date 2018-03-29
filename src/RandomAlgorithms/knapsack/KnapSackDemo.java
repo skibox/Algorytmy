@@ -120,6 +120,7 @@ public class KnapSackDemo {
 		for (int i = 0; i < decrypted.length; i++) {
 			System.out.print(decrypted[i] + " ");
 		}
+		System.out.println("Equal: ");
 	}
 }
 
