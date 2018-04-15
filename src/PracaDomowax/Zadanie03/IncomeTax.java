@@ -1,4 +1,4 @@
-package app;
+package PracaDomowax.Zadanie03;
 
 import java.util.Scanner;
 
@@ -18,7 +18,7 @@ public class IncomeTax {
 		} else
 			userTax = 14839.02 + (userSalary - 85528) * 0.32;
 
-		System.out.printf("Twój podatek dochodowy to: %.2f z³\n", userTax);
+		System.out.printf("Twï¿½j podatek dochodowy to: %.2f zï¿½\n", userTax);
 		scan.close();
 	}
 }

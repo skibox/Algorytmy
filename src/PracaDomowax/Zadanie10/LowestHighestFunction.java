@@ -1,4 +1,4 @@
-package app;
+package PracaDomowax.Zadanie10;
 
 import java.util.Scanner;
 
@@ -35,7 +35,7 @@ public class LowestHighestFunction {
 		b = scan.nextInt();
 		c = scan.nextInt();
 		
-		System.out.printf("Najmniejsza: %d; Najwiêksza: %d\n",
+		System.out.printf("Najmniejsza: %d; Najwiï¿½ksza: %d\n",
 						   lowestNumber(a, b, c), highestNumber(a, b, c));
 		scan.close();
 	}

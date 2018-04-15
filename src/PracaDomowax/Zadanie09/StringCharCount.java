@@ -1,4 +1,4 @@
-package app;
+package PracaDomowax.Zadanie09;
 
 import java.util.Scanner;
 
@@ -9,7 +9,7 @@ public class StringCharCount {
 		char chosen;
 		int charCount = 0;
 		
-		System.out.println("Podaj wybrany ci¹g znaków: ");
+		System.out.println("Podaj wybrany ciï¿½g znakï¿½w: ");
 		input = scan.nextLine();
 		input.toLowerCase();
 		
@@ -21,7 +21,7 @@ public class StringCharCount {
 			if(input.charAt(i) == chosen) charCount++;
 		}
 		
-		System.out.printf("Literka %c wystapi³a w zdaniu %d razy.\n", chosen, charCount);
+		System.out.printf("Literka %c wystapiï¿½a w zdaniu %d razy.\n", chosen, charCount);
 		scan.close();
 	}
 	

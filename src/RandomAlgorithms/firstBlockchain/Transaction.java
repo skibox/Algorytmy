@@ -4,9 +4,6 @@ import java.security.PrivateKey;
 import java.security.PublicKey;
 import java.util.ArrayList;
 
-import org.apache.xalan.xsltc.trax.OutputSettings;
-import org.bson.NewBSONDecoder;
-
 public class Transaction {
 	public String transactionId;
 	public PublicKey sender;
@@ -17,6 +14,7 @@ public class Transaction {
 	public ArrayList<TransactionInput> inputs = new ArrayList<>();
 	public ArrayList<TransactionOutput> outputs = new ArrayList<>();
 	
+	@SuppressWarnings("unused")
 	private static int sequence = 0;
 	
 	public Transaction(PublicKey from, PublicKey to, float value, ArrayList<TransactionInput> inputs) {

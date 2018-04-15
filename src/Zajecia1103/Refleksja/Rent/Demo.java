@@ -6,6 +6,7 @@ import java.lang.reflect.Method;
 import java.util.Arrays;
 
 public class Demo {
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static void main(String[] args) throws Exception {
 		Class rental = RentCar.class;
 		System.out.println("Pełna nazwa klasy: " + rental.getName());

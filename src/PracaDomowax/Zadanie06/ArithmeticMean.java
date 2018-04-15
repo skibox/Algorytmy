@@ -1,4 +1,4 @@
-package app;
+package PracaDomowax.Zadanie06;
 
 import java.util.Scanner;
 
@@ -8,7 +8,7 @@ public class ArithmeticMean {
 		int numberCount = 0;
 		int sumTotal = 0;
 		
-		System.out.println("Ile liczb chcesz wczytaæ?");
+		System.out.println("Ile liczb chcesz wczytaï¿½?");
 		numberCount = scan.nextInt();
 		scan.nextLine();
 		
@@ -18,7 +18,7 @@ public class ArithmeticMean {
 			scan.nextLine();
 		}
 		
-		System.out.printf("Suma liczb: %d; Œrednia: %.2f", sumTotal, (double)sumTotal/numberCount);
+		System.out.printf("Suma liczb: %d; ï¿½rednia: %.2f", sumTotal, (double)sumTotal/numberCount);
 		scan.close();
 		
 		

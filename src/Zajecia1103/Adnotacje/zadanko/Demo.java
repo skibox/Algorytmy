@@ -10,7 +10,7 @@ public class Demo {
 	}
 	
 	public static void main(String[] args) throws Exception{
-		Class testClass = Demo.class;
+		Class<Demo> testClass = Demo.class;
 		
 		Method testMethod = Demo.class.getDeclaredMethod("test");
 		MyDocumentation annotation = testMethod.getAnnotation(MyDocumentation.class);

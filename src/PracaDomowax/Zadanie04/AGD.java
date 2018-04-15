@@ -1,4 +1,4 @@
-package app;
+package PracaDomowax.Zadanie04;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -6,8 +6,8 @@ import java.util.Scanner;
 public class AGD {
 	
 	public static void creditInfo(double taxPercent, double finalPrice, int rateCount, double initialPrice) {
-		System.out.printf("Cena po oprocentowaniu: %.2f z³\n", finalPrice);
-		System.out.printf("Rata miesiêczna na produkt to: %.2f z³\n", rateValue(taxPercent, rateCount, initialPrice));
+		System.out.printf("Cena po oprocentowaniu: %.2f zï¿½\n", finalPrice);
+		System.out.printf("Rata miesiï¿½czna na produkt to: %.2f zï¿½\n", rateValue(taxPercent, rateCount, initialPrice));
 	}
 	
 	public static double rateValue(double taxPercent, int rateCount, double initialPrice) {
@@ -23,10 +23,10 @@ public class AGD {
 		Scanner scan = new Scanner(System.in);
 		scan.useLocale(Locale.US);
 		
-		System.out.println("Podaj cenê produktu: ");
+		System.out.println("Podaj cenï¿½ produktu: ");
 		initialPrice = scan.nextDouble();
 		scan.nextLine();
-		System.out.println("Podaj iloœæ rat: ");
+		System.out.println("Podaj iloï¿½ï¿½ rat: ");
 		rateCount = scan.nextInt();
 		scan.nextLine();
 		

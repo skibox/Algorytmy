@@ -1,4 +1,4 @@
-package app;
+package PracaDomowax.Zadanie07;
 
 import java.util.Scanner;
 
@@ -18,7 +18,7 @@ public class RealNumberArray {
 		}
 		System.out.println();
 
-		System.out.println("Odwrócona tablica: ");
+		System.out.println("Odwrï¿½cona tablica: ");
 		for (int i = realArray.length - 1; i >= 0; i--) {
 			System.out.printf("%.1f\t", realArray[i]);
 		}

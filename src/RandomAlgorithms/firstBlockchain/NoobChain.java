@@ -3,7 +3,6 @@ package RandomAlgorithms.firstBlockchain;
 import java.security.Security;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.function.Consumer;
 
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 

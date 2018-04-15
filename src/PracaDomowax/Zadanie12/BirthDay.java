@@ -1,4 +1,4 @@
-package app;
+package PracaDomowax.Zadanie12;
 
 import java.time.LocalDateTime;
 import java.util.Calendar;

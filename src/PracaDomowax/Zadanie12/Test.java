@@ -1,4 +1,4 @@
-package app;
+package PracaDomowax.Zadanie12;
 
 public class Test {
 	public static void main(String[] args) {
@@ -7,6 +7,6 @@ public class Test {
 		Person person2 = new Person("Anna", "Kowalska", "90021508220");
 		System.out.println(person2);
 		
-		System.out.println("Jan ¿yje " + person1.daysFromBirthDay() + " dni.");
+		System.out.println("Jan ï¿½yje " + person1.daysFromBirthDay() + " dni.");
 	}
 }

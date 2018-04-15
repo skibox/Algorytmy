@@ -1,4 +1,4 @@
-package app;
+package PracaDomowax.Zadanie08;
 
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -42,12 +42,12 @@ public class AdvancedArrays {
 		System.out.println();
 
 		System.out.printf("MIN = %d, MAX = %d\n", lowestNumber, highestNumber);
-		System.out.printf("Œrednia = %.2f\n", meanNumber);
-		System.out.printf("Mniejszych od œredniej: %d\n", lowerThanMean);
-		System.out.printf("Wiêkszych od œredniej: %d\n", higherThanMean);
+		System.out.printf("ï¿½rednia = %.2f\n", meanNumber);
+		System.out.printf("Mniejszych od ï¿½redniej: %d\n", lowerThanMean);
+		System.out.printf("Wiï¿½kszych od ï¿½redniej: %d\n", higherThanMean);
 		System.out.println();
 		
-		System.out.println("Liczby w odwrotnej kolejnoœci: ");
+		System.out.println("Liczby w odwrotnej kolejnoï¿½ci: ");
 		for (int i = naturalNumbers.length - 1; i >= 0; i--) {
 			System.out.printf("%d\t", naturalNumbers[i]);
 		}

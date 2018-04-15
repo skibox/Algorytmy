@@ -1,4 +1,4 @@
-package app;
+package PracaDomowax.Zadanie13;
 
 public class Staff extends Person {
 	private String school;

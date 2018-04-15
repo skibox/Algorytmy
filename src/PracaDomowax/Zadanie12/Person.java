@@ -1,4 +1,4 @@
-package app;
+package PracaDomowax.Zadanie12;
 
 public class Person {
 	private String firstName;
@@ -73,8 +73,8 @@ public class Person {
 	@Override
 	public String toString() {
 		StringBuilder output = new StringBuilder();
-		output.append("Imiê: ").append(firstName).append(", Nazwisko: ").append(lastName).append(", PESEL: ").append(PESEL)
-		.append(", Data urodzenia: ").append(birthDay).append(", P³eæ: ").append(gender);
+		output.append("Imiï¿½: ").append(firstName).append(", Nazwisko: ").append(lastName).append(", PESEL: ").append(PESEL)
+		.append(", Data urodzenia: ").append(birthDay).append(", Pï¿½eï¿½: ").append(gender);
 		
 		return output.toString();
 	}

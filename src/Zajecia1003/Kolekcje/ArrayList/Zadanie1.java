@@ -13,8 +13,8 @@ public class Zadanie1 {
 			wrappers[i] = Integer.valueOf(i);
 		}
 		
-		List arr1 = Arrays.asList(primitives);
-		List arr2 = Arrays.asList(wrappers);
+		List<int[]> arr1 = Arrays.asList(primitives);
+		List<Integer> arr2 = Arrays.asList(wrappers);
 		System.out.println();
 	}
 }

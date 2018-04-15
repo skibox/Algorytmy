@@ -9,10 +9,6 @@ import java.security.spec.ECGenParameterSpec;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import org.openqa.selenium.interactions.InputSource;
-
-import com.gargoylesoftware.htmlunit.javascript.host.Map;
-
 public class Wallet {
 	public PrivateKey privateKey;
 	public PublicKey publicKey;

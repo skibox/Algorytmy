@@ -1,4 +1,4 @@
-package app;
+package PracaDomowax.Zadanie13;
 
 public class Person {
 	private String name;

@@ -9,7 +9,7 @@ public class Test {
 	}
 	
 	public static void main(String[] args) throws Exception {
-		Class testClazz = Test.class;
+		Class<Test> testClazz = Test.class;
 		
 		Method annoMethod = Test.class.getDeclaredMethod("annotationTest");
 		FirstAnnotation annotation = annoMethod.getAnnotation(FirstAnnotation.class);

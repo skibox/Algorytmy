@@ -1,4 +1,4 @@
-package app;
+package PracaDomowax.Zadanie11;
 
 public class MyTime {
 	private int hour = 0;

@@ -1,4 +1,4 @@
-package app;
+package PracaDomowax.Zadanie05;
 
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -13,7 +13,7 @@ public class RandomBallSim {
 		}
 		
 		for (int i = 0; i < box.length; i++) {
-			System.out.printf("Do urny %d wpad³o %d kul, co stanowi %.0f%% wszystkich kul\n",
+			System.out.printf("Do urny %d wpadï¿½o %d kul, co stanowi %.0f%% wszystkich kul\n",
 							   i+1, box[i], (double)box[i]*100/20);
 		;
 		}
